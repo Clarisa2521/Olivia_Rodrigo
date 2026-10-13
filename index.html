@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Rodrigo | GUTS & SOUR Fan Universe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        guts: {
+                            purple: '#7029b9',
+                            dark: '#120722',
+                            card: '#1e0f36',
+                            accent: '#a855f7',
+                            light: '#c084fc',
+                            pink: '#ec4899'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0b0314;
+            color: #f3e8ff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .active-tab {
+            background-color: #7029b9 !important;
+            color: #ffffff !important;
+            border-bottom: 3px solid #a855f7;
+            box-shadow: 0 4px 14px rgba(112, 41, 185, 0.4);
+        }
+        .sour-sticker {
+            transform: rotate(-3deg);
+            transition: all 0.3s ease;
+        }
+        .sour-sticker:hover {
+            transform: rotate(2deg) scale(1.03);
+        }
+        .glass-card {
+            background: rgba(30, 15, 54, 0.75);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+        }
+        .guts-btn {
+            background: linear-gradient(135deg, #7029b9 0%, #a855f7 100%);
+            transition: all 0.3s ease;
+        }
+        .guts-btn:hover {
+            box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-purple-500 selection:text-white">
+
+    <!-- Header Navbar -->
+    <header class="sticky top-0 z-50 glass-card border-b border-purple-900/50 px-4 lg:px-8 py-3">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+            <!-- Logo -->
+            <div class="flex items-center gap-3 cursor-pointer" onclick="switchTab('inicio')">
+                <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center font-black text-xl text-black border-2 border-purple-300 shadow-lg">
+                    OR
+                </div>
+                <div>
+                    <h1 class="text-2xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-300">
+                        OLIVIA RODRIGO
+                    </h1>
+                    <p class="text-xs text-purple-300 tracking-widest uppercase font-semibold">GUTS & SOUR Universe</p>
+                </div>
+            </div>
+
+            <!-- Navigation Bar -->
+            <nav class="flex flex-wrap justify-center gap-1 sm:gap-2">
+                <button onclick="switchTab('inicio')" id="btn-inicio" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-house mr-1.5"></i>Inicio
+                </button>
+                <button onclick="switchTab('biografia')" id="btn-biografia" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-book-open mr-1.5"></i>Biografía
+                </button>
+                <button onclick="switchTab('musica')" id="btn-musica" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-music mr-1.5"></i>Música
+                </button>
+                <button onclick="switchTab('tours')" id="btn-tours" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-ticket mr-1.5"></i>Tours
+                </button>
+                <button onclick="switchTab('galeria')" id="btn-galeria" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-images mr-1.5"></i>Galería
+                </button>
+                <button onclick="switchTab('comunidad')" id="btn-comunidad" class="nav-btn px-4 py-2 rounded-xl text-sm font-semibold transition-all hover:bg-purple-900/50 text-purple-200">
+                    <i class="fa-solid fa-users mr-1.5"></i>Comunidad
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Containers -->
+    <main class="max-w-7xl mx-auto w-full p-4 md:p-8 flex-grow">
+
+        <!-- ================= INICIO ================= -->
+        <section id="sec-inicio" class="content-section space-y-12">
+            <!-- Hero Banner -->
+            <div class="relative rounded-3xl overflow-hidden glass-card border border-purple-500/30 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="absolute -top-24 -left-24 w-72 h-72 bg-purple-600/30 rounded-full blur-3xl pointer-events-none"></div>
+                <div class="absolute -bottom-24 -right-24 w-72 h-72 bg-pink-600/20 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="space-y-6 max-w-xl z-10">
+                    <span class="bg-purple-900/80 border border-purple-500/40 text-purple-300 text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider">
+                        ★ Pop Icon & Singer-Songwriter
+                    </span>
+                    <h2 class="text-4xl sm:text-6xl font-black leading-none tracking-tight">
+                        BIENVENIDO AL MUNDO DE <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">OLIVIA</span>
+                    </h2>
+                    <p class="text-purple-200/90 text-base md:text-lg leading-relaxed">
+                        Explora la discografía, historia, tours y fotos reales de Olivia Isabel Rodrigo. Nacida el 20 de febrero de 2003 en Murrieta, California.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="switchTab('musica')" class="guts-btn px-6 py-3 rounded-2xl font-bold text-white flex items-center gap-2 shadow-lg">
+                            <i class="fa-solid fa-play"></i> Escuchar SOUR & GUTS
+                        </button>
+                        <button onclick="switchTab('comunidad')" class="px-6 py-3 rounded-2xl font-bold border border-purple-500/50 hover:bg-purple-900/40 text-purple-200 transition">
+                            Unirse a la Comunidad
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative z-10 w-full md:w-80 flex-shrink-0">
+                    <div class="sour-sticker rounded-3xl overflow-hidden border-4 border-purple-400 shadow-2xl relative group">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Rodrigo Stage" 
+                             class="w-full h-96 object-cover transform group-hover:scale-105 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent p-4 text-center">
+                            <p class="font-bold text-white text-lg">GUTS World Tour</p>
+                            <p class="text-xs text-purple-300">Live Performance Experience</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Singles Quick Grid -->
+            <div>
+                <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-purple-300">
+                    <i class="fa-solid fa-star text-yellow-400"></i> Sencillos Más Populares
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="glass-card p-5 rounded-2xl border border-purple-500/20 hover:border-purple-500/60 transition">
+                        <div class="text-purple-400 text-3xl mb-2 font-black">01</div>
+                        <h4 class="font-bold text-lg text-white">drivers license</h4>
+                        <p class="text-xs text-purple-300 mt-1">El éxito global rompe-récords que la catapultó a la cima de Billboard Hot 100.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border border-purple-500/20 hover:border-purple-500/60 transition">
+                        <div class="text-purple-400 text-3xl mb-2 font-black">02</div>
+                        <h4 class="font-bold text-lg text-white">vampire</h4>
+                        <p class="text-xs text-purple-300 mt-1">Sencillo principal de GUTS. Un potente himno de pop-rock con piano dramático.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border border-purple-500/20 hover:border-purple-500/60 transition">
+                        <div class="text-purple-400 text-3xl mb-2 font-black">03</div>
+                        <h4 class="font-bold text-lg text-white">good 4 u</h4>
+                        <p class="text-xs text-purple-300 mt-1">Pop-punk cargado de energía nostálgica de los 2000s con millones de reproducciones.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-2xl border border-purple-500/20 hover:border-purple-500/60 transition">
+                        <div class="text-purple-400 text-3xl mb-2 font-black">04</div>
+                        <h4 class="font-bold text-lg text-white">get him back!</h4>
+                        <p class="text-xs text-purple-300 mt-1">Ritmo contagioso, sarcasmo fresco y líricas afiladas características de Olivia.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= BIOGRAFÍA ================= -->
+        <section id="sec-biografia" class="content-section hidden space-y-8">
+            <div class="glass-card p-8 rounded-3xl border border-purple-500/30 space-y-6">
+                <div class="border-b border-purple-800 pb-4">
+                    <h2 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                        BIOGRAFÍA Y TRAYECTORIA
+                    </h2>
+                    <p class="text-purple-300 text-sm">De estrella Disney a superestrella del Pop Rock mundial</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-1">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Rodrigo Artist" 
+                             class="rounded-2xl border-2 border-purple-500/40 shadow-xl w-full h-80 object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80'">
+                        
+                        <div class="mt-4 p-4 glass-card rounded-xl border border-purple-500/20 text-xs space-y-2">
+                            <p><strong class="text-purple-300">Nombre completo:</strong> Olivia Isabel Rodrigo</p>
+                            <p><strong class="text-purple-300">Nacimiento:</strong> 20 de febrero de 2003</p>
+                            <p><strong class="text-purple-300">Origen:</strong> Murrieta, California, EE. UU.</p>
+                            <p><strong class="text-purple-300">Premios destacados:</strong> 3 Grammy Awards, Billboard Music Awards, MTV VMAs</p>
+                        </div>
+                    </div>
+
+                    <div class="md:col-span-2 space-y-4 text-purple-100 text-sm leading-relaxed">
+                        <h3 class="text-xl font-bold text-purple-300">Inicios en la Actuación</h3>
+                        <p>
+                            Olivia Rodrigo comenzó su carrera en el entretenimiento desde muy joven. Logró gran reconocimiento protagonizando como Paige Olvera en la serie de Disney Channel <em>Bizaardvark</em> y posteriormente interpretando a Nini Salazar-Roberts en la exitosa serie de Disney+ <em>High School Musical: The Musical: The Series</em>, donde compuso la canción viral "All I Want".
+                        </p>
+
+                        <h3 class="text-xl font-bold text-purple-300">El fenómeno de "SOUR" (2021)</h3>
+                        <p>
+                            En enero de 2021, lanzó su sencillo debut "drivers license", el cual batió récords de reproducciones en Spotify y permaneció en el puesto #1 del Billboard Hot 100 durante semanas. Su álbum debut, <em>SOUR</em>, se convirtió en un fenómeno global aclamado por la crítica, ganando 3 Premios Grammy, incluyendo Mejor Artista Nuevo.
+                        </p>
+
+                        <h3 class="text-xl font-bold text-purple-300">La consolidación con "GUTS" (2023)</h3>
+                        <p>
+                            En septiembre de 2023, Olivia lanzó su esperado segundo álbum de estudio, <em>GUTS</em>, producido junto a Dan Nigro. Con éxitos como "vampire", "bad idea right?" y "get him back!", el álbum explora temas de crecimiento, fama, desencanto amoroso y la transición a la adultez con una potente mezcla de pop, alt-rock y baladas emotivas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= MÚSICA ================= -->
+        <section id="sec-musica" class="content-section hidden space-y-8">
+            <h2 class="text-3xl font-black text-purple-300 flex items-center gap-2">
+                <i class="fa-solid fa-compact-disc text-purple-400"></i> ÁLBUMES Y DISCOGRAFÍA
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Album SOUR -->
+                <div class="glass-card p-6 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-purple-900/80 text-purple-300 text-xs px-3 py-1 rounded-full font-bold">2021 • Debut Album</span>
+                                <h3 class="text-3xl font-black text-white mt-2">SOUR</h3>
+                            </div>
+                            <span class="text-2xl font-bold text-pink-400">★ 3x Grammy</span>
+                        </div>
+                        <ul class="text-sm text-purple-200 divide-y divide-purple-900/60 my-4">
+                            <li class="py-2 flex justify-between"><span>1. brutal</span> <span class="text-xs text-purple-400">2:37</span></li>
+                            <li class="py-2 flex justify-between font-semibold text-purple-300"><span>2. traitor</span> <span class="text-xs text-purple-400">3:49</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>3. drivers license</span> <span class="text-xs text-purple-400">4:02</span></li>
+                            <li class="py-2 flex justify-between font-semibold text-purple-300"><span>4. 1 step forward, 3 steps back</span> <span class="text-xs text-purple-400">2:43</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>5. deja vu</span> <span class="text-xs text-purple-400">3:35</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>6. good 4 u</span> <span class="text-xs text-purple-400">2:58</span></li>
+                            <li class="py-2 flex justify-between"><span>7. enough for you</span> <span class="text-xs text-purple-400">3:22</span></li>
+                            <li class="py-2 flex justify-between"><span>8. happier</span> <span class="text-xs text-purple-400">2:55</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://open.spotify.com" target="_blank" class="guts-btn w-full py-3 rounded-xl font-bold text-center text-white block mt-4">
+                        <i class="fa-brands fa-spotify mr-2"></i> Reproducir SOUR
+                    </a>
+                </div>
+
+                <!-- Album GUTS -->
+                <div class="glass-card p-6 rounded-3xl border border-purple-500/30 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <span class="bg-pink-900/80 text-pink-300 text-xs px-3 py-1 rounded-full font-bold">2023 • Second Album</span>
+                                <h3 class="text-3xl font-black text-white mt-2">GUTS</h3>
+                            </div>
+                            <span class="text-2xl font-bold text-purple-400">★ Critical Acclaim</span>
+                        </div>
+                        <ul class="text-sm text-purple-200 divide-y divide-purple-900/60 my-4">
+                            <li class="py-2 flex justify-between"><span>1. all-american bitch</span> <span class="text-xs text-purple-400">2:45</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>2. bad idea right?</span> <span class="text-xs text-purple-400">3:04</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>3. vampire</span> <span class="text-xs text-purple-400">3:39</span></li>
+                            <li class="py-2 flex justify-between font-semibold text-purple-300"><span>4. lacy</span> <span class="text-xs text-purple-400">2:57</span></li>
+                            <li class="py-2 flex justify-between font-bold text-purple-300"><span>5. get him back!</span> <span class="text-xs text-purple-400">3:31</span></li>
+                            <li class="py-2 flex justify-between"><span>6. ballad of a homeschooled girl</span> <span class="text-xs text-purple-400">3:23</span></li>
+                            <li class="py-2 flex justify-between"><span>7. making the bed</span> <span class="text-xs text-purple-400">3:18</span></li>
+                            <li class="py-2 flex justify-between font-semibold text-purple-300"><span>8. logical</span> <span class="text-xs text-purple-400">3:51</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://open.spotify.com" target="_blank" class="guts-btn w-full py-3 rounded-xl font-bold text-center text-white block mt-4">
+                        <i class="fa-brands fa-spotify mr-2"></i> Reproducir GUTS
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TOURS ================= -->
+        <section id="sec-tours" class="content-section hidden space-y-8">
+            <div class="flex justify-between items-center flex-wrap gap-4">
+                <div>
+                    <h2 class="text-3xl font-black text-purple-300">GUTS WORLD TOUR</h2>
+                    <p class="text-purple-300 text-sm">Fechas y recintos en estadios e estadios de todo el mundo</p>
+                </div>
+                <span class="bg-purple-600 text-black px-4 py-1.5 rounded-full font-bold text-xs">SOLD OUT</span>
+            </div>
+
+            <div class="space-y-4">
+                <div class="glass-card p-5 rounded-2xl border border-purple-500/20 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-purple-500/60 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="text-center bg-purple-900/60 p-3 rounded-xl min-w-[70px]">
+                            <p class="text-xs text-purple-400 font-bold">MAR</p>
+                            <p class="text-2xl font-black text-white">15</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Los Angeles, CA</h4>
+                            <p class="text-xs text-purple-300">Crypto.com Arena</p>
+                        </div>
+                    </div>
+                    <span class="bg-purple-900/60 text-purple-300 text-xs px-3 py-1.5 rounded-lg">Completado</span>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border border-purple-500/20 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-purple-500/60 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="text-center bg-purple-900/60 p-3 rounded-xl min-w-[70px]">
+                            <p class="text-xs text-purple-400 font-bold">ABR</p>
+                            <p class="text-2xl font-black text-white">05</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">New York, NY</h4>
+                            <p class="text-xs text-purple-300">Madison Square Garden</p>
+                        </div>
+                    </div>
+                    <span class="bg-purple-900/60 text-purple-300 text-xs px-3 py-1.5 rounded-lg">Completado</span>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border border-purple-500/20 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-purple-500/60 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="text-center bg-purple-900/60 p-3 rounded-xl min-w-[70px]">
+                            <p class="text-xs text-purple-400 font-bold">MAY</p>
+                            <p class="text-2xl font-black text-white">14</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">London, UK</h4>
+                            <p class="text-xs text-purple-300">The O2 Arena</p>
+                        </div>
+                    </div>
+                    <span class="bg-purple-900/60 text-purple-300 text-xs px-3 py-1.5 rounded-lg">Completado</span>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl border border-purple-500/20 flex flex-col md:flex-row justify-between items-center gap-4 hover:border-purple-500/60 transition">
+                    <div class="flex items-center gap-4">
+                        <div class="text-center bg-purple-900/60 p-3 rounded-xl min-w-[70px]">
+                            <p class="text-xs text-purple-400 font-bold">OCT</p>
+                            <p class="text-2xl font-black text-white">22</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-lg text-white">Ciudad de México, MX</h4>
+                            <p class="text-xs text-purple-300">Estadio GNP Seguros</p>
+                        </div>
+                    </div>
+                    <span class="bg-purple-600 text-black text-xs font-bold px-3 py-1.5 rounded-lg">Próximamente</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= GALERÍA DE FOTOS REALES ================= -->
+        <section id="sec-galeria" class="content-section hidden space-y-8">
+            <div class="border-b border-purple-800 pb-4">
+                <h2 class="text-3xl font-black text-purple-300 flex items-center gap-2">
+                    <i class="fa-solid fa-camera text-pink-400"></i> GALERÍA FOTOGRÁFICA
+                </h2>
+                <p class="text-purple-300 text-sm">Fotografías reales de Olivia Rodrigo en conciertos, eventos y presentaciones en vivo</p>
+            </div>
+
+            <!-- Photo Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Foto 1 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Rodrigo Live Concert" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">GUTS World Tour Show</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">GUTS Tour Performance</h4>
+                        <p class="text-xs text-purple-400">Escenario e iluminación en vivo</p>
+                    </div>
+                </div>
+
+                <!-- Foto 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Rodrigo Piano Performance" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">Acoustic Piano Session</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">Piano & Drivers License Live</h4>
+                        <p class="text-xs text-purple-400">Interpretación acústica</p>
+                    </div>
+                </div>
+
+                <!-- Foto 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Rodrigo Stadium Crowds" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">Stadium Vibes</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">Público y Fans</h4>
+                        <p class="text-xs text-purple-400">Ambiente de concierto</p>
+                    </div>
+                </div>
+
+                <!-- Foto 4 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Guitar" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">Electric Guitar Solo</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">Pop-Rock Energy</h4>
+                        <p class="text-xs text-purple-400">Presentación con guitarra eléctrica</p>
+                    </div>
+                </div>
+
+                <!-- Foto 5 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" 
+                             alt="Olivia Backstage & Studio" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">Studio & Backstage</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">Sesión de Grabación</h4>
+                        <p class="text-xs text-purple-400">Proceso creativo de SOUR y GUTS</p>
+                    </div>
+                </div>
+
+                <!-- Foto 6 -->
+                <div class="glass-card rounded-2xl overflow-hidden border border-purple-500/30 group">
+                    <div class="h-72 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=800&q=80" 
+                             alt="Grammy Awards Night" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 group-hover:opacity-100 transition p-4 flex items-end">
+                            <p class="text-xs text-purple-200 font-semibold">Purple Lights Stage</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h4 class="font-bold text-purple-200 text-sm">Luces Violetas</h4>
+                        <p class="text-xs text-purple-400">Estética visual del tour</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= COMUNIDAD (DATOS ACTUALIZADOS) ================= -->
+        <section id="sec-comunidad" class="content-section hidden space-y-8">
+            <div class="glass-card p-8 rounded-3xl border border-purple-500/40 space-y-8">
+                <div class="border-b border-purple-800 pb-4">
+                    <h2 class="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                        COMUNIDAD Y CONTACTO
+                    </h2>
+                    <p class="text-purple-300 text-sm">Sección del fan club y datos del estudiante creador</p>
+                </div>
+
+                <!-- Tarjeta de Datos del Fan / Estudiante -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-card p-6 rounded-2xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/40 to-black/60 shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300 text-xl mb-4">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+                        <p class="text-xs text-purple-400 font-bold uppercase tracking-wider">Nombre del Integrante</p>
+                        <h3 class="text-xl font-black text-white mt-1">Clarisa Salazar Nieto</h3>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/40 to-black/60 shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300 text-xl mb-4">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <p class="text-xs text-purple-400 font-bold uppercase tracking-wider">Grupo / Semestre</p>
+                        <h3 class="text-xl font-black text-white mt-1">5B</h3>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl border-2 border-purple-500/50 bg-gradient-to-br from-purple-900/40 to-black/60 shadow-xl relative overflow-hidden">
+                        <div class="absolute -right-6 -top-6 w-24 h-24 bg-purple-500/20 rounded-full blur-xl"></div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/30 border border-purple-400/40 flex items-center justify-center text-purple-300 text-xl mb-4">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <p class="text-xs text-purple-400 font-bold uppercase tracking-wider">Teléfono de Contacto</p>
+                        <h3 class="text-xl font-black text-white mt-1">7852346741</h3>
+                    </div>
+                </div>
+
+                <!-- Formulario de Fan Club -->
+                <div class="mt-8 pt-6 border-t border-purple-900/60">
+                    <h3 class="text-xl font-bold text-purple-200 mb-4 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane text-purple-400"></i> Envía tu mensaje a la comunidad
+                    </h3>
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-purple-300 mb-1">Tu Nombre</label>
+                                <input type="text" required placeholder="Escribe tu nombre..." class="w-full bg-purple-950/60 border border-purple-500/30 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-purple-300 mb-1">Canción Favorita</label>
+                                <input type="text" required placeholder="Ej. vampire, traitor..." class="w-full bg-purple-950/60 border border-purple-500/30 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-400">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-purple-300 mb-1">Mensaje para el Fan Club</label>
+                            <textarea rows="3" required placeholder="¿Por qué eres fan de Olivia Rodrigo?..." class="w-full bg-purple-950/60 border border-purple-500/30 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-purple-400"></textarea>
+                        </div>
+                        <button type="submit" class="guts-btn px-6 py-3 rounded-xl font-bold text-white text-sm">
+                            <i class="fa-solid fa-heart mr-1.5"></i> Enviar Mensaje
+                        </button>
+                    </form>
+                    <div id="form-alert" class="hidden mt-4 p-4 rounded-xl bg-purple-900/80 border border-purple-400 text-xs text-purple-100">
+                        ¡Gracias por tu mensaje! Tus datos han sido registrados en la comunidad.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-t border-purple-900/50 py-6 px-4 mt-12 text-center text-xs text-purple-400 space-y-2">
+        <p>© 2026 Olivia Rodrigo Fanbase | Diseñado con estilo SOUR & GUTS</p>
+        <p class="text-purple-300">Página web escolar elaborada por <strong class="text-purple-200">Clarisa Salazar Nieto (5B)</strong></p>
+    </footer>
+
+    <!-- Interactive Tabs JavaScript -->
+    <script>
+        function switchTab(tabId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(sec => sec.classList.add('hidden'));
+
+            // Quitar clase activa de todos los botones
+            const buttons = document.querySelectorAll('.nav-btn');
+            buttons.forEach(btn => btn.classList.remove('active-tab'));
+
+            // Mostrar la sección seleccionada
+            const targetSection = document.getElementById('sec-' + tabId);
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+
+            // Activar el botón correspondiente
+            const targetBtn = document.getElementById('btn-' + tabId);
+            if (targetBtn) {
+                targetBtn.classList.add('active-tab');
+            }
+
+            // Desplazar suavemente arriba
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const alertBox = document.getElementById('form-alert');
+            alertBox.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                alertBox.classList.add('hidden');
+            }, 4000);
+        }
+
+        // Inicializar con la pestaña Inicio activa al cargar
+        window.onload = function() {
+            switchTab('inicio');
+        };
+    </script>
+</body>
+</html>
